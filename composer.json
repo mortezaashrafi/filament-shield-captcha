@@ -1,0 +1,51 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "mortezaashrafi/filament-shield-captcha",
+    "description": "Production-grade inline image CAPTCHA field for Filament forms (PHP GD, zero image persistence).",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2 || ^8.3 || ^8.4 || ^8.5",
+        "ext-gd": "*",
+        "filament/filament": "^3.0 || ^4.0 || ^5.0",
+        "illuminate/cache": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/contracts": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^9.0 || ^10.0 || ^11.0",
+        "phpstan/phpstan": "^1.11",
+        "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MortezaAshrafi\\FilamentShieldCaptcha\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MortezaAshrafi\\FilamentShieldCaptcha\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MortezaAshrafi\\FilamentShieldCaptcha\\FilamentShieldCaptchaServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": false
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
