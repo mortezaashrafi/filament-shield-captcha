@@ -10,6 +10,26 @@ A production-grade inline Image CAPTCHA field for Filament forms.
 - Bundled fonts (OFL): Vazirmatn + Noto Sans, with custom font path support
 - **Auto RTL support**: Automatically switches fonts based on locale direction.
 
+## Screenshots
+
+Panel (Light / Dark):
+
+<table>
+  <tr>
+    <td width="50%"><img src="https://mortezaashrafi.com/storage/scripts/shield-captcha/filament/panel-lite.jpg" alt="Filament panel CAPTCHA (Light)" /></td>
+    <td width="50%"><img src="https://mortezaashrafi.com/storage/scripts/shield-captcha/filament/panel-dark.jpg" alt="Filament panel CAPTCHA (Dark)" /></td>
+  </tr>
+</table>
+
+Login page (Light / Dark):
+
+<table>
+  <tr>
+    <td width="50%"><img src="https://mortezaashrafi.com/storage/scripts/shield-captcha/filament/login-lite.jpg" alt="Filament login CAPTCHA (Light)" /></td>
+    <td width="50%"><img src="https://mortezaashrafi.com/storage/scripts/shield-captcha/filament/login-dark.jpg" alt="Filament login CAPTCHA (Dark)" /></td>
+  </tr>
+</table>
+
 ## Compatibility
 
 | Package  | Versions           |
@@ -115,7 +135,8 @@ class Login extends BaseLogin
         return parent::form($form)
             ->components([
                 ...$form->getComponents(),
-                $this->getCaptchaFormComponent(),
+                $this->getCaptchaFormComponent()
+                ->width(371),
             ]);
     }
 }
@@ -138,7 +159,8 @@ class Register extends BaseRegister
         return parent::form($form)
             ->components([
                 ...$form->getComponents(),
-                $this->getCaptchaFormComponent(),
+                $this->getCaptchaFormComponent()
+                ->width(371),
             ]);
     }
 }
@@ -161,7 +183,8 @@ class Register extends BaseRequestPasswordReset
         return parent::form($form)
             ->components([
                 ...$form->getComponents(),
-                $this->getCaptchaFormComponent(),
+                $this->getCaptchaFormComponent()
+                ->width(371),
             ]);
     }
 }
