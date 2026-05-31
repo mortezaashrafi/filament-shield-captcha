@@ -68,7 +68,7 @@
                                 'autocapitalize' => 'off',
                                 'spellcheck' => 'false',
                                 'disabled' => $isDisabled,
-                                'required' => $isRequired(),
+                                'aria-required' => $isRequired() ? 'true' : 'false',
                                 $applyStateBindingModifiers('wire:model') => $statePath,
                             ], escape: false)
                             ->class(['fi-input'])
